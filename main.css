@@ -1,0 +1,23 @@
+.title {
+    color: gray
+}
+
+.text {
+    color: aliceblue
+}
+
+.copyright {
+    color: orange;
+}
+
+.nav {
+    color: silver;
+}
+
+.table_head {
+    color: goldenrod;
+}
+
+.table_link {
+    color: yellow;
+}
