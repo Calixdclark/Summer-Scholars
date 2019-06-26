@@ -1,33 +1,39 @@
 h1, h2 {
-    color: cyan;
+    color: lightgray;
     font-family: Verdana;
     text-align: center;
-    text-shadow: 2px 2px rgb(0, 199, 199);
+    text-shadow: 2px 2px gray;
 }
 
 h3, ol, td {
-    color: darkcyan;
+    color: white;
     font-family: 'Courier New', Courier, monospace;
     text-align: justify;
     text-indent: 50px;
     line-height: 25px;
-    text-shadow: 1px 1px rgb(0, 110, 110);
+    ;
 }
 
-nav, a:link, a:visited{
-    color: rgb(48, 114, 155);
+a:link, a:visited{
+    color: rgb(255, 255, 255);
     text-decoration: none;
-    background-color: aqua;
+    background-color: rgba(255, 255, 255, 0);
 }
 
 a:hover {
-    background-color: rgba(52, 156, 221, 0.288);
+    background-color: rgba(255, 255, 255, 0.548);
 }
 
 footer {
-    color: lightblue;
+    color: rgb(85, 85, 85);
 }
 
 table {
     width: 1450px; height: 700px; float: left;
 }
+
+nav {
+    color: gray;
+    text-decoration: none;
+    background-color: black;
+} 
