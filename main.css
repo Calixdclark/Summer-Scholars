@@ -1,23 +1,41 @@
 .title {
-    color: gray
+    color: #1D84B5;
+}
+
+.subtitle {
+    color: #2589BD;
 }
 
 .text {
-    color: aliceblue
+    color: #53A2BE;
 }
 
 .copyright {
-    color: orange;
+    color: #00BFB2;
 }
 
 .nav {
-    color: silver;
+    color: #6083FF;
 }
 
 .table_head {
-    color: goldenrod;
+    color: #00A5CF;
 }
 
-.table_link {
-    color: yellow;
+a:visited {
+    color: #6073FF;
+}
+
+a:link {
+    text-decoration: none;
+}
+  
+a:visited {
+    text-decoration: none;
+}
+  
+a:hover {
+    color: #7B00FF;
+    text-decoration: underline;
+    background-color: #370072;
 }
