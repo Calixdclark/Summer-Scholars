@@ -1,5 +1,7 @@
 .title {
     color: #1D84B5;
+    background-color: darkblue;
+    border: 10px solid darkblue;
 }
 
 .subtitle {
@@ -7,7 +9,11 @@
 }
 
 .text {
-    color: #53A2BE;
+    color: #84DEFF;
+}
+
+.subtext {
+    color: aqua;
 }
 
 .copyright {
@@ -16,21 +22,27 @@
 
 .nav {
     color: #6083FF;
+    width: 320px;
+    margin: auto;
+    border: 10px solid blue;
+    background-color: blue
 }
 
 .table_head {
     color: #00A5CF;
-}
-
-a:visited {
-    color: #6073FF;
+    width: 310px;
+    margin: auto;
+    border: 10px solid darkblue;
+    background-color: darkblue;
 }
 
 a:link {
     text-decoration: none;
+    background-color: darkblue
 }
   
 a:visited {
+    color: #6073FF;
     text-decoration: none;
 }
   
