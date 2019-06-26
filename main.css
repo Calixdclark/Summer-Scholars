@@ -2,18 +2,30 @@ h1, h2 {
     color: cyan;
     font-family: Verdana;
     text-align: center;
-    text-shadow: 2px 2px rgb(0, 199, 199)
+    text-shadow: 2px 2px rgb(0, 199, 199);
 }
 
-h3 {
+h3, ol, td {
     color: darkcyan;
     font-family: 'Courier New', Courier, monospace;
     text-align: justify;
     text-indent: 50px;
     line-height: 25px;
-    text-shadow: 1px 1px rgb(0, 110, 110)
+    text-shadow: 1px 1px rgb(0, 110, 110);
 }
 
-href {
-    text-shadow: purple
+nav, a:link, a:visited{
+    color: rgb(74, 186, 255);
+    text-decoration: none;
+    background-color: aqua;
+}
+
+a:hover {
+    color: skyblue;
+    background-color: aquamarine;
+}
+
+footer {
+    color: lightblue;
+    
 }
