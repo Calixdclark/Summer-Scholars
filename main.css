@@ -15,14 +15,14 @@ h3, ol, td {
 }
 
 nav, a:link, a:visited{
-    color: rgb(74, 186, 255);
+    color: rgb(62, 145, 197);
     text-decoration: none;
     background-color: aqua;
 }
 
 a:hover {
     color: skyblue;
-    background-color: aquamarine;
+    background-color: aquamarine
 }
 
 footer {
