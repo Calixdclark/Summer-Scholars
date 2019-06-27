@@ -15,9 +15,8 @@ h3, ol, td {
 }
 
 a:link, a:visited{
-    color: rgb(255, 255, 255);
+    color: lightgray;
     text-decoration: none;
-    background-color: rgba(255, 255, 255, 0);
 }
 
 a:hover {
@@ -25,7 +24,8 @@ a:hover {
 }
 
 footer {
-    color: rgb(85, 85, 85);
+    color: gray;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
 table {
