@@ -60,7 +60,8 @@ table {
 }
 
 ul {
-    text-align: center;   
+    text-align: center;  
+    list-style-type: none; 
 }
 
 ol {
@@ -68,6 +69,6 @@ ol {
     width: 50px;
 }
 
-ul {
-    list-style-type: none;
+  li {
+    display: inline;
   }
