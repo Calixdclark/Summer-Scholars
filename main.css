@@ -4,6 +4,7 @@ h1, h2, h4 {
     text-align: center;
     text-shadow: 2px 2px gray;
     padding: 20px;
+    text-align: left;
 }
 
 h3, ol{
