@@ -64,11 +64,15 @@ ul {
     list-style-type: none; 
 }
 
+li {
+    padding: 1%;
+}
+
 ol {
     margin-left: 355px;
     width: 50px;
 }
 
-  li {
+.h-layout {
     display: inline;
   }
