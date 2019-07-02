@@ -67,9 +67,9 @@ header, footer {
 }
 
 table {
-    width: 50em;
+    width: 92em;
     height: 50em;
-    float: right;
+    float: center;
 }
 
 ul {
@@ -96,11 +96,13 @@ ol {
     min-height: 800px;
     max-height: 800px;
 }
+ .fp-title-left {
+     float: left;
+     padding: 1em;
+     margin: 1em;
+ }
 
-.column-side {
-    width: 45%;
-  }
-
-  .table-up {
-      
-  }
+ .fp-text {
+    padding: 1em;
+    margin: 1em;
+ }
