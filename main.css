@@ -1,10 +1,19 @@
 h1, h2, h4 {
-    color: lightgray;
+    color: darkgray;
     font-family: Verdana;
     text-align: center;
     text-shadow: 2px 2px gray;
     padding: 20px;
     text-align: left;
+}
+
+h1, h2 {
+    background-color: lightgray;
+}
+
+h2 {
+    margin-top: 0.5px;
+    background-color: lightgray;
 }
 
 p, ol{
@@ -41,12 +50,16 @@ a:hover {
     background-color: rgba(255, 255, 255, 0.548);
 }
 
+.cr-table {
+    max-width: 41.8em;
+}
+
 header, footer {
     color: lightgray;
     background-color: gray;
     font-family: Verdana;
     text-align: center;
-    max-width: 1450px;
+    max-width: 1490px;
     min-width: 750;
     padding: 2.5px;
     margin-top: 1px;
@@ -54,9 +67,9 @@ header, footer {
 }
 
 table {
-    width: 1450px;
-    height: 750px;
-    float: center;
+    width: 50em;
+    height: 50em;
+    float: right;
 }
 
 ul {
@@ -75,4 +88,19 @@ ol {
 
 .h-layout {
     display: inline;
+  }
+
+.int-fit {
+    min-width: 1470px;
+    max-width: 1470px;
+    min-height: 800px;
+    max-height: 800px;
+}
+
+.column-side {
+    width: 45%;
+  }
+
+  .table-up {
+      
   }
