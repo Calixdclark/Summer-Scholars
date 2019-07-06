@@ -1,0 +1,23 @@
+h1 {
+    color: lime;
+    background-color: green;
+    margin-right: 17.9em;
+    margin-left: 17em;
+}
+
+p {
+    color: limegreen;
+    background-color: green;
+    margin-right: 25em;
+    margin-left: 26.5em;
+}
+
+.enter-a-guess {
+    color: lime;
+    background-color: green;
+    margin-left: 22.5em;
+}
+
+body {
+    background-image: url("number.gif");
+}

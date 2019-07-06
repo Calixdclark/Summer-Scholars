@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <meta charset="utf-8"> 
+    <title>Random number guessing game</title>  
+</head> 
+ 
+<link href="style.css" type="text/css" rel="stylesheet">
+
+<body> 
+<h1>Guess the random number</h1> 
+  
+<p>A random number from 1 to 100 has been selected. The objective is to guess what number was chosen.</p> 
+  
+<div class="form"> 
+    <label for="guessField" class="enter-a-guess">Enter a guess into the field to the right, then click the "Submit Guess" button: </label> 
+    <input type = "text" id = "guessField" class = "guessField"> 
+    <input type = "submit" value = "Submit guess" 
+           class = "guessSubmit" id = "submitguess"> 
+</div> 
+
+<script type = "text/javascript"> 
+  
+    var y = Math.floor(Math.random() * 100 + 1); 
+      
+    var guess = 1; 
+      
+    document.getElementById("submitguess").onclick = function(){ 
+         
+   var x = document.getElementById("guessField").value; 
+  
+   if(x == y) 
+   {     
+        alert("Entry is correct. Entries submitted: "
+               + guess + " entries. Reload to replay ");
+        
+   } 
+   else if(x > y)
+   {     
+       guess++; 
+	   alert("Entry is too large. Enter a smaller value");
+   } 
+   else if(x < y)
+   { 
+       guess++; 
+       alert("Entry is too small. Enter a larger value");
+   } 
+   else
+   {
+		guess++;
+		alert("Invalid entry. Entry must be a number from 1 to 100");
+   }
+   var myObj = {var:y};
+console.log(myObj);
+}
+</script>
+</body>
+</html>
