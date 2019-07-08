@@ -19,7 +19,7 @@
            class = "guessSubmit" id = "submitguess"> 
 </div> 
 
-<script type = "text/javascript"> 
+<script> 
   
     var y = Math.floor(Math.random() * 100 + 1); 
       
@@ -32,8 +32,19 @@
    if(x == y) 
    {     
         alert("Entry is correct. Entries submitted: "
-               + guess + " entries. Reload to replay ");
+               + guess + " entries. Reload to play again ");
+               document.body.style.background = "url('Good-job.gif') no-repeat top center";
         
+   } 
+   else if(x > 100)
+   {     
+       guess++; 
+	   alert("Invalid entry. Entry must be a number from 1 to 100");
+   } 
+   else if(x < 1)
+   {     
+       guess++; 
+	   alert("Invalid entry. Entry must be a number from 1 to 100");
    } 
    else if(x > y)
    {     
@@ -50,8 +61,7 @@
 		guess++;
 		alert("Invalid entry. Entry must be a number from 1 to 100");
    }
-   var myObj = {var:y};
-console.log(myObj);
+console.log(y);
 }
 </script>
 </body>
