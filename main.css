@@ -50,18 +50,6 @@ ol {
     width: 50px;
 }
 
-}
-.fp-title-left {
-    float: left;
-    padding: 1em;
-    margin: 1em;
-}
-
-.fp-text {
-   padding: 1em;
-   margin: 1em;
-}
-
 header, footer {
     color: lightgray;
     background-color: gray;
@@ -108,4 +96,15 @@ a:hover {
     max-width: 1470px;
     min-height: 800px;
     max-height: 800px;
+}
+
+.fp-title-left {
+    float: left;
+    padding: 1em;
+    margin: 1em;
+}
+
+.fp-text {
+   padding: 1em;
+   margin: 1em;
 }
