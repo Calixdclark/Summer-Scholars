@@ -19,7 +19,6 @@ p {
 }
 
 body {
-    background-image: url("Marvel.gif");
-    background-repeat: no-repeat;
+    background-image: url("background.gif");
     background-size: cover;
 }
