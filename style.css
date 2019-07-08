@@ -1,11 +1,11 @@
-h1 {
+.guessH1 {
     color: cyan;
     background-color: darkblue;
     margin-right: 17.9em;
     margin-left: 17em;
 }
 
-p {
+.guessP {
     color: cyan;
     background-color: darkblue;
     margin-right: 25em;
@@ -18,7 +18,7 @@ p {
     margin-left: 22.5em;
 }
 
-body {
+.guessBody {
     background-image: url("background.gif");
     background-size: cover;
 }
