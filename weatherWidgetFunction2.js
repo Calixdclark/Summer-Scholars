@@ -1,112 +1,61 @@
-$(document).ready(function () {
-
-    // Call Weather for Current
-    function weather(lat, long) {
-        var URL = `api.openweathermap.org/data/2.5/weather?q=` + cityName + '&unit';
-
-        $.getJSON(URL, function(data) {
-            updateDOM(data);
-        });
-    }
-
-    // Update Dom for Current
-    function updateDOM(data) {
-        var city = data.name;
-        var temp = Math.round(data.main.temp_max);
-        var desc = data.weather[0].description;
-        var icon = data.weather[0].icon;
-
-        $('#cityCurrent').html(city);
-        $('#tempCurrent').html(temp);
-        $('#descCurrent').html(desc);
-        $('#iconCurrent').attr('src', icon);
-    }
-
-        // Call Weather for Tomorrow
-        function weather(lat, long) {
-            var URL = `https://fcc-weather-api.glitch.me/api/current?lat=${lat}&lon=${long}`;
+function loadTodaysWeather() {
     
-            $.getJSON(URL, function(data) {
-                updateDOM(data);
-            });
-        }
-    
-        // Update Dom for Tomorrow
-        function updateDOM(data) {
-            var city = data.name;
-            var temp = Math.round(data.main.temp_max);
-            var desc = data.weather[0].description;
-            var icon = data.weather[0].icon;
-    
-            $('#cityTomorrow').html(city);
-            $('#tempTomorrow').html(temp);
-            $('#descTomorrow').html(desc);
-            $('#iconTomorrow').attr('src', icon);
-        }
+    $(document).ready(function(){
+      $('#submit').click(function() | {
 
-        // Call Weather for After
-        function weather(lat, long) {
-            var URL = `https://fcc-weather-api.glitch.me/api/current?lat=${lat}&lon=${long}`;
-    
-            $.getJSON(URL, function(data) {
-                updateDOM(data);
-            });
-        }
-            
-        // Update Dom for After
-        function updateDOM(data) {
-            var city = data.name;
-            var temp = Math.round(data.main.temp_max);
-            var desc = data.weather[0].description;
-            var icon = data.weather[0].icon;
-    
-            $('#cityAfter').html(city);
-            $('#tempAfter').html(temp);
-            $('#descAfter').html(desc);
-            $('#iconAfter').attr('src', icon);
-        }
+        var cityName = $('input').val();
+        var URL = "http://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=imperial&APPID=7bbeedaea5164bb8d2d29b4ed347e1df"
 
-        // Call Weather for Later
-        function weather(lat, long) {
-            var URL = `https://fcc-weather-api.glitch.me/api/current?lat=${lat}&lon=${long}`;
-            
-            $.getJSON(URL, function(data) {
-                updateDOM(data);
-            });
-        }
-            
-        // Update Dom for Later
-        function updateDOM(data) {
-            var city = data.name;
-            var temp = Math.round(data.main.temp_max);
-            var desc = data.weather[0].description;
-            var icon = data.weather[0].icon;
-            
-            $('#cityLater').html(city);
-            $('#tempLater').html(temp);
-            $('#descLater').html(desc);
-            $('#iconLater').attr('src', icon);
-        }
+      })
+    })
 
-        // Call Weather for Soon
-        function weather(lat, long) {
-            var URL = `https://fcc-weather-api.glitch.me/api/current?lat=${lat}&lon=${long}`;
-            
-            $.getJSON(URL, function(data) {
-                updateDOM(data);
-            });
-        }
-            
-        // Update Dom for Soon
-        function updateDOM(data) {
-            var city = data.name;
-            var temp = Math.round(data.main.temp_max);
-            var desc = data.weather[0].description;
-            var icon = data.weather[0].icon;
-            
-            $('#citySoon').html(city);
-            $('#tempSoon').html(temp);
-            $('#descSoon').html(desc);
-            $('#iconSoon').attr('src', icon);
-        }
-});
+  //---------------------
+  // This is where you would get references to all
+  // HTML elements that you want to update with new data
+  // based on the results of the asynchronous API call you make below
+  //---------------------
+  
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+          
+          //---------------------
+          console.log("Successful...");
+          //console.log(this.responseText);
+
+          let weather = JSON.parse(this.responseText);
+          console.log(weather);
+
+          // This is where you would update the HTML elements above
+          // with the data you pull from the API call response
+          // document.getElementById("demo").innerHTML = this.responseText;
+          //---------------------
+
+          let dayCurrent = document.getElementById("dayCurrent");
+          dayCurrent.innerHTML = new Date();
+
+          let tempCurrent = document.getElementById("tempCurrent");
+          tempCurrent.innerHTML = weather.main.temp;
+
+          let descCurrent = document.getElementById("descCurrent");
+          descCurrent.innerHTML = weather.weather[0].description;
+          
+      } else {
+          
+          //---------------------
+          console.log("failure...")
+          // error message for user that API is down
+          //---------------------
+          
+      }
+  };
+  xhttp.open("GET", URL, true);
+  xhttp.send();
+}
+      
+//---------------------
+// Make sure you call the function to begin the request for information
+// In the weather widget, you will want to call this function using the
+// onClick event of the form submit button
+loadTodaysWeather();
+//---------------------
