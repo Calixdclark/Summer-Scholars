@@ -8,7 +8,7 @@
     background-color: lightgray;
 }
 
-.middle {
+.middle, form, div {
     color: darkgray;
     font-family: Verdana;
     text-shadow: 1px 1px gray;
@@ -18,6 +18,10 @@
     text-align: left;
     background-color: rgba(80, 80, 80, 0.548);
     border: 2.5px solid gray;
+}
+
+form {
+    text-align: center;
 }
 
 a:link, a:visited{

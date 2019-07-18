@@ -145,3 +145,29 @@ if (navigator.geolocation) {
 } else { 
     alert('Geolocation is not supported! Check browser/os settings.'); 
 }
+
+const getApiUrlForecast = (lat, lon) => 'https://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + '&appid=2bcc4123a99bf9b75c11673b0029ea8a';
+
+const geoSuccessForecast = position => {
+  startPos = position;
+  lat = startPos.coords.latitude;
+  lon = startPos.coords.longitude;
+
+
+  makeRequestForecast('GET', getApiUrlForecast(lat, lon), handleWeather);
+};
+
+// Parsing the response from the API into actual
+// JavaScript objects that we can work with
+let weatherDataDays = JSON.parse(this.response);
+
+// Iterating over the list of weather objects provided
+// for each day
+for(let counter = 0; counter < weatherDataDays.list.length; counter++){
+    // Pulling out one day object at a time from the list
+    // of data provided by the API
+    let currentDay = weatherDataDays.list[counter];
+    // Printing out a single day object to the console
+    // this is the object we will pull data from
+    console.log(currentDay);
+}

@@ -1,13 +1,4 @@
 function loadTodaysWeather() {
-    
-    $(document).ready(function(){
-      $('#submit').click(function() | {
-
-        var cityName = $('input').val();
-        var URL = "http://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=imperial&APPID=7bbeedaea5164bb8d2d29b4ed347e1df"
-
-      })
-    })
 
   //---------------------
   // This is where you would get references to all
@@ -49,7 +40,8 @@ function loadTodaysWeather() {
           
       }
   };
-  xhttp.open("GET", URL, true);
+
+  xhttp.open("GET", 'http://api.openweathermap.org/data/2.5/weather?q='+city+'&units=imperial&APPID=7bbeedaea5164bb8d2d29b4ed347e1df', true);
   xhttp.send();
 }
       
